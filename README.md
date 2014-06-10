@@ -1,0 +1,1 @@
+This program is a simple task list program, written primarily for the purpose of keep track of a list of homework and exam dates.
