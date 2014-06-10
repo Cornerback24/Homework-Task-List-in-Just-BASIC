@@ -7,3 +7,15 @@ Alt+v: View Description
 Alt+z: Undo Delete Task (deleted tasks can only be recovered in the current session)
 
 
+To run this program, put the following files in the same folder (this is standard for Just BASIC executables):
+Task List.exe
+Task List.tkn
+VBAS31W.SLL
+VGUI31W.SSL
+VOFLR31W.SSL
+VTHK31W.DLL
+VTK1631W.DLL
+VTK3231W.DLL
+VVM31W.DLL
+VVMT31W.DLL
+Run "Task List.exe" to launch the program.
