@@ -496,3 +496,11 @@
         if numTasks = 1 then call enable 'enable buttons if resotre added to empty list
         call listBoxSelect
     end sub
+                
+    'returns true if filename$ exists (given a relative path)
+    function fileExists(filename$)                           
+        fileExists = 0
+        dim fileInfo$(1, 1)
+        files DefaultDir$, filename$, fileInfo$()
+        if val(fileInfo$(0, 0)) > 0 then fileExists = 1
+    end function
