@@ -22,6 +22,13 @@
 '   class()
 '   description()
 
+    'create tasks.txt if it doesn't exist
+    if not(fileExists("tasks.txt")) then
+        open "tasks.txt" for append as #file
+        print #file, 0
+        close #file
+    end if
+
     dim daysLeft(0) 'This array has numbers, they're easier to sort (currently seems to be used only as temporary variable in calculation days left
                     'mabye change this?  Sorting is done by walk down list when add a new task until place found by date, and edit done by deleting and
                     'then re-creating task.)
@@ -496,9 +503,9 @@
         if numTasks = 1 then call enable 'enable buttons if resotre added to empty list
         call listBoxSelect
     end sub
-                
+
     'returns true if filename$ exists (given a relative path)
-    function fileExists(filename$)                           
+    function fileExists(filename$)
         fileExists = 0
         dim fileInfo$(1, 1)
         files DefaultDir$, filename$, fileInfo$()
